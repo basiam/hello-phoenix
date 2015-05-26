@@ -12,8 +12,7 @@ chan.join().receive("ok", chan => {
 })
 
 chan.on("new_msg", payload => {
-    console.log("dupa1")
-    messagesContainer.append(`<br/>[${Date()}] ${payload.body}`)
+   messagesContainer.append(`<br/>[${Date()}] ${payload.body}`)
 })
 
 
