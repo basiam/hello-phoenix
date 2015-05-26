@@ -20,6 +20,10 @@ defmodule HelloWorld.Router do
     get "/hello/:messenger", HelloController, :show
   end
 
+  socket "/ws", HelloWorld do
+    channel "rooms:*", RoomChannel
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloWorld do
   #   pipe_through :api
