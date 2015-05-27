@@ -22,3 +22,10 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+config :hello_world, HelloWorld.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "hello_world_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
